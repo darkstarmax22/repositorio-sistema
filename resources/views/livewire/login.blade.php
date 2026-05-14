@@ -1,25 +1,3 @@
-<?php
-
-use Livewire\Component;
-use Illuminate\Support\Facades\Auth;
-
-new class extends Component
-{
-    public $email = '';
-    public $password = '';
-    public $error = '';
-
-    public function login()
-    {
-        if (Auth::attempt(['email' => $this->email, 'password' => $this->password])) {
-            return redirect()->intended('/dashboard');
-        }
-
-        $this->error = 'Usuario o contraseña incorrectos.';
-    }
-};
-?>
-
 <div id="contenedor">
     <div id="arriba">
         <img src="{{ asset('imagenes/barras.jpeg') }}" alt="Encabezado Institucional" style="width: 100%; height: 100%; object-fit: fill; display: block;">

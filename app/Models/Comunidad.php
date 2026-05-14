@@ -17,6 +17,7 @@ class Comunidad extends Model
         'rif',
         'correo',
         'numero_telefono',
+        'estado',
         'anio',
         'profesor_id',
         'coordinacion_id'
